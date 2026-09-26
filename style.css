@@ -1,0 +1,187 @@
+
+:root {
+    --bg-dark: #192a32;       
+    --card-dark: #1f3641;     
+    --card-shadow: #101c22;   
+    --color-x: #31c3bd;       
+    --color-o: #f2b137;       
+    --color-tie: #a8bfc9;     
+    --text-light: #a8bfc9;    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 460px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} 
+
+.header h1 {
+    color: var(--color-x);
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.header h1 .x-color {
+    color: var(--color-x);
+}
+.header h1 .o-color {
+    color: var(--color-o);
+}
+/* منطقة أزرار الاختيار */
+.mode-selector {
+    display: flex;
+    gap: 15px;
+}
+
+
+.mode-btn {
+    flex: 1;
+    padding: 15px;
+    background-color: var(--card-dark); 
+    color: var(--text-light);          
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 var(--card-shadow);
+    transition: all 0.2s ease;         
+}
+
+.mode-btn:hover {
+    background-color: #2c4756;
+    color: #ffffff;
+}
+
+.mode-btn.active {
+    background-color: var(--color-x);  
+    color: var(--bg-dark);             
+    box-shadow: 0 5px 0 #259691;       
+}
+
+
+.mode-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 var(--card-shadow);
+}
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.score-card {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.restart-btn {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--color-x); 
+    color: var(--bg-dark);         
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #192a32;      
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;                       
+    margin-top: 10px;
+}
+
+
+.restart-btn:hover {
+    background-color: #f5bc52;       
+}
+
+
+.restart-btn:active {
+    transform: translateY(4px);      
+    box-shadow: 0 2px 0 #b88118;      
+}
+
+.score-card:nth-child(1) { background-color: var(--color-x); color: var(--bg-dark); }
+.score-card:nth-child(2) { background-color: var(--color-tie); color: var(--bg-dark); }
+.score-card:nth-child(3) { background-color: var(--color-o); color: var(--bg-dark); }
+
+.player-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.score-number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.status-text {
+    color: var(--text-light);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.cell {
+    aspect-ratio: 1 / 1; 
+    background-color: var(--card-dark);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 0 var(--card-shadow); 
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+
+.cell:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 var(--card-shadow);
+}
+
+.cell.x {
+    color: var(--color-x);
+}
+
+.cell.o {
+    color: var(--color-o);
+}

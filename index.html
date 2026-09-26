@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO-Game</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+ <header class="header">
+    <h1>Tic Tac Toe <span class="x-color">X</span><span class="o-color">O</span></h1>
+           
+ </header>
+ <div class="mode-selector">
+    <button id="btnAI" class="mode-btn active">Play with AI 🤖</button>
+    <button id="btnFriend" class="mode-btn ">With Friend🎮</button>
+ </div>
+ <div class="scoreboard">
+    <div class="score-card">
+        <span class="player-title">YOU (X) </span>
+        <span id="scoreX" class="score-number">0</span>
+    </div>
+    <div class="score-card">
+        <span class="player-title">DRAW</span>
+        <span id="scoreDraw" class="score-number">0</span>
+    </div>
+    <div class="score-card">
+        <span id="playerOTitle" class="player-title">AI (O) </span>
+        <span id="scoreO" class="score-number">0</span>
+    </div>
+ </div>
+ <div id="status" class="status-text"> Your turn — X</div>
+ <div id="board" class="board">
+ <button class="cell" data-index="0"></button>
+ <button class="cell" data-index="1"></button>
+ <button class="cell" data-index="2"></button>
+ <button class="cell" data-index="3"></button>
+ <button class="cell" data-index="4"></button>
+ <button class="cell" data-index="5"></button>
+ <button class="cell" data-index="6"></button>
+ <button class="cell" data-index="7"></button>
+ <button class="cell" data-index="8"></button>
+ </div>
+ <button id="restartBtn" class="restart-btn">Play Again 🔄</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
